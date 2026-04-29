@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0,255,255,0.2);
+  animation: floatParticle linear infinite;
+  pointer-events: none;
+}
+@keyframes floatParticle {
+  0% { transform: translateY(0); opacity: 0;}
+  50% { opacity: 0.6; }
+  100% { transform: translateY(-120vh); opacity: 0;}
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px 20px;
+}
+header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  background: linear-gradient(90deg,#ff00ff,#00ffff,#ff8a00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: moveGradient 4s linear infinite;
+}
+@keyframes moveGradient {
+  to {background-position: 100%;}
+}
+
+main {
+  width: 90%;
+  max-width: 800px;
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+  padding: 40px;
+  margin-bottom: 50px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.3),0 0 60px rgba(255,0,255,0.3);
+}
+
+textarea {
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  padding: 25px;
+  font-size: 1.1rem;
+  background: rgba(255,255,255,0.05);
+  color: #0ff;
+  outline: none;
+  resize: vertical;
+  font-family: 'Orbitron', monospace;
+  min-height: 150px;
+}
+
+#stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 35px;
+  justify-content: center;
+}
+
+.stat-box {
+  flex: 1 1 150px;
+  text-align: center;
+  padding: 30px;
+  border-radius: 25px;
+  color: #0ff;
+  box-shadow: 0 0 20px #0ff,0 0 40px #f0f;
+  font-family: 'Orbitron', monospace;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  margin-top: 10px;
+  animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+  to {transform: scale(1.2);}
+}
+
+footer {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
